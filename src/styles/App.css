@@ -62,7 +62,7 @@ a {
   font-size: 20px;
 }
 
-.magazine {
+.magazine-button {
   width: 150px;
   height: 50px;
   font-size: 30px;
@@ -74,6 +74,19 @@ a {
   text-align: center;
   background: rgb(243, 239, 239);
 }
+
+/* .magazine-button {
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  /* margin: 15px;
+  padding: 5px; */
+  /* text-align: center;
+  background: rgb(243, 239, 239);
+} */ 
 
 .magazines-shelf {
   box-sizing: border-box;
@@ -87,11 +100,12 @@ a {
   /* For inner content */
   display: flex;
   flex-flow: row wrap;
+  align-content: flex-start;
 }
 
 .product-сard {
-  width: 300px;
-  height: auto;
+  /* width: 300px; */
+  max-height: 238px;
   flex-basis: calc(33.33% - 30px);
   box-sizing: border-box;
   margin: 15px;
@@ -173,6 +187,7 @@ a {
   border-radius: 5px;
   margin: 10px 0 0 0;
   text-align: center;
+  font-size: 18px;
 }
 
 .cart-info {
@@ -188,10 +203,10 @@ a {
 }
 
 .item-cart {
+  min-height: 200px;
   border: 2px solid black;
   border-radius: 15px;
-  height: 200px;
-  margin: 10px;
+  margin: 8px;
   background-color: rgb(243, 197, 189);
   /* for inner element */
   display: flex;
@@ -203,6 +218,11 @@ a {
   border: 2px solid black;
   border-radius: 15px;
   margin: 12px;
+  padding: 1px;
+  /* for inner elemnts */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-cart-info {
