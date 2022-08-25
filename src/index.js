@@ -3,29 +3,9 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
 import {Provider} from 'react-redux'
+import { store } from './redux/store';
 
- 
-const defaultState = {
-  productsInCart: [],
-  totalPrice: 0
-}
-
-const reducer = (state = defaultState, action) => {
-  switch (action.type) {
-    case 'ADD_PRODUCT':
-      return { ...state, productsInCart: [...state.productsInCart, action.payload] };
-    case 'ADD_PRICE':
-      return { ...state, totalPrice: state.totalPrice + action.payload };
-    case 'MINUS_PRICE':
-      return { ...state, totalPrice: state.totalPrice - action.payload };
-    default:
-      return state
-  }
-}
-
-const store = createStore(reducer)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
