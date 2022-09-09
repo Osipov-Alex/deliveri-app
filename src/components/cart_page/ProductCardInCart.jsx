@@ -14,13 +14,13 @@ const ItemCart = (props) => {
     if (items > 0) {
       setItems(Number(items) - 1)
       dispatch({type: 'DECREASE_QUANTITY', payload: props.product.id })
-    }
+    }  
   }
 
   return (
     <div className='item-cart'>
       <div className='cart-image'>
-        <img src={props.product.productImage} alt='' width='379px' height='162px' />
+        <img src={props.product.image} alt='' width='379px' height='162px' />
       </div>
       <div className='item-cart-info'>
         <div className='item-info'>

@@ -4,6 +4,7 @@ import ProductCardInCart from './ProductCardInCart';
 
 const CartShelf = () => {
   const productsInCart = useSelector(state => state.cart.productsInCart)
+  console.log(productsInCart)
   
   return (
     <div className='cart-info'>

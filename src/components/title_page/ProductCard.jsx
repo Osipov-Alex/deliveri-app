@@ -7,7 +7,7 @@ const ProductCard = (props) => {
 
   const addProduct = (productToCart) => {
     if (productsInCart.length === 0) {
-      dispatch({ type: 'ADD_PRODUCT', payload: {productName: productToCart.productName,  id: productToCart.id, quantity: 1, price: productToCart.price } }) 
+      dispatch({ type: 'ADD_PRODUCT', payload: {productName: productToCart.productName,  id: productToCart._id, quantity: 1, price: productToCart.price, image: productToCart.image } }) 
     } else {
       let count = 0;
       for (let i = 0; i < productsInCart.length; i++) {
@@ -16,7 +16,7 @@ const ProductCard = (props) => {
         }
       }
       if (!count) {
-        dispatch({ type: 'ADD_PRODUCT', payload: {productName: productToCart.productName,  id: productToCart.id, quantity: 1, price: productToCart.price } })
+        dispatch({ type: 'ADD_PRODUCT', payload: {productName: productToCart.productName,  id: productToCart._id, quantity: 1, price: productToCart.price, image: productToCart.image } })
       }
     }
 
