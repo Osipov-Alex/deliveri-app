@@ -28,6 +28,10 @@ const cartReducer = (state = defaultState, action) => {
           }
         })
       };
+    case "REMOVE_FROM_CART":
+      return {
+        productsInCart: state.productsInCart.filter(product => product.id !== action.payload)
+      };
     default: 
       return state
   }

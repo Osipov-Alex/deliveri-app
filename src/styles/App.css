@@ -252,6 +252,16 @@ a {
   border-right: 1px solid black;
   border-radius: 8px 0 0 8px;
   width: 110px;
+  height: 36px;
+}
+
+.item-btn {
+  text-align: center;
+  font-size: 15px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 0 0 0;
 }
 
 .item-btns {

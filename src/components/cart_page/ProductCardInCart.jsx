@@ -17,6 +17,10 @@ const ItemCart = (props) => {
     }  
   }
 
+  function removeFromCart() {
+    dispatch({ type: 'REMOVE_FROM_CART', payload: props.product.id })
+  }
+
   return (
     <div className='item-cart'>
       <div className='cart-image'>
@@ -43,6 +47,9 @@ const ItemCart = (props) => {
             <button onClick={clickUp} className='item-button-up'>&#x21E7;</button>
             <button onClick={clickDown} className='item-button-down'>&#x21E9;</button>
           </div>
+        </div>
+        <div className='item-btn'>
+          <button onClick={ removeFromCart }>REMOVE</button>
         </div>
       </div>
     </div>
