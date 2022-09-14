@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const UserInfo = () => {
-  const [userName, setUserName] = useState('')
-  const [userEmail, setUserEmail] = useState('')
-  const [userPhoneNumber, setUserPhoneNumber] = useState('')
-  const [userAdress, setUserAdress] = useState('')
+
+  const dispatch = useDispatch()
+
+  const { name, address, email, phoneNumber } = useSelector(state => state.user)
+  
   return (
     <div className='user-data'>
       <div className='name data-element'>
@@ -13,8 +15,8 @@ const UserInfo = () => {
           className='input'
           type='text'
           placeholder="What's your name?"
-          value={userName}
-          onChange={e => setUserName(e.target.value)}
+          value={name}
+          onChange={e => dispatch({ type: 'NAME', payload: e.target.value})}
         />
       </div>
       <div className='email data-element'>
@@ -23,8 +25,8 @@ const UserInfo = () => {
           className='input'
           type='text'
           placeholder='Your email?'
-          value={userEmail}
-          onChange={e => setUserEmail(e.target.value)}
+          value={email}
+          onChange={e => dispatch({ type: 'EMAIL', payload: e.target.value})}
         />
       </div>
       <div className='phone data-element'>
@@ -33,8 +35,8 @@ const UserInfo = () => {
           className='input'
           type='text'
           placeholder='Your phone number?'
-          value={userPhoneNumber}
-          onChange={e => setUserPhoneNumber(e.target.value)}
+          value={phoneNumber}
+          onChange={e => dispatch({ type: 'PHONE_NUMBER', payload: e.target.value})}
         />
       </div>
       <div className='address data-element'>
@@ -43,8 +45,8 @@ const UserInfo = () => {
           className='input'
           type='text'
           placeholder='Where do you live?'
-          value={userAdress}
-          onChange={e => setUserAdress(e.target.value)}
+          value={address}
+          onChange={e => dispatch({ type: 'ADDRESS', payload: e.target.value})}
         />
       </div>
     </div>

@@ -4,6 +4,8 @@ const defaultState = {
 
 const cartReducer = (state = defaultState, action) => {
   switch (action.type) {
+    case 'MAKE_ORDER':
+      return { productsInCart: [] }
     case 'ADD_PRODUCT':
       return { ...state, productsInCart: [...state.productsInCart, action.payload] };
     case 'INCREASE_QUANTITY':
