@@ -217,7 +217,7 @@ a {
   box-sizing: border-box;
   border: 2px solid black;
   border-radius: 15px;
-  margin: 12px;
+  margin: 12px 0 12px 12px;
   padding: 1px;
   /* for inner elemnts */
   display: flex;
@@ -255,13 +255,14 @@ a {
   height: 36px;
 }
 
-.item-btn {
+.item-btn-remove {
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   box-sizing: border-box;
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 2px solid black;
+  border-radius: 4px;
   margin: 10px 0 0 0;
+  background-color: rgb(248, 248, 248);
 }
 
 .item-btns {
@@ -309,4 +310,90 @@ a {
   border: 2px solid black;
   border-radius: 10px;
   background-color: rgb(248, 248, 248);
+}
+
+.history-page {
+  box-sizing: border-box;
+  border: 2px solid black;
+  margin: 10px 10px 10px 10px;
+  background-color: wheat;
+  /* for inner element */
+  display: flex;
+  flex-direction: column;
+}
+
+.history-user-information {
+  box-sizing: border-box;
+  border: 2px solid black;
+  margin: 10px 10px 10px 10px;
+  padding: 15px 0 30px 0;
+  background-color: rgb(221, 216, 216);
+  /* for inner element */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.history-user-element {
+  margin: 10px 0 10px 0;
+}
+
+.history-shelf {
+  height: 57vh;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 2px solid black;
+  margin: 5px 10px 10px 10px;
+  background-color: rgb(221, 216, 216);
+  /* for inner element */
+  display: flex;
+  flex-direction: column;
+}
+
+.history-order-card {
+  background-color: wheat;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  /* for inner element */
+  display: flex;
+}
+
+.history-order-shelf{
+  flex: 7;
+  /* for inner element */
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.history-order-price{
+  flex: 1;
+  align-items: flex-end;
+  align-self: center;
+  text-align: center;
+}
+
+.history-product-card{
+  box-sizing: border-box;
+  border: 2px solid black;
+  margin: 10px;
+  background-color: rgb(243, 197, 189);
+  border-radius: 10px;
+  /* for inner element */
+  display: flex;
+}
+
+.history-card-item-info{
+  align-items: center;
+  margin: 3px;
+}
+
+.history-card-item-name{
+  font-size: 18px;
+}
+
+.history-card-item-price{
+  font-size: 18px;
 }

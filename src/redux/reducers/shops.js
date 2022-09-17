@@ -1,6 +1,5 @@
 const defaultState = {
-  shops: [
-  ],
+  shops: [],
   currentShop: ''
 }
 

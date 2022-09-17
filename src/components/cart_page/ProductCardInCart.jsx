@@ -48,8 +48,8 @@ const ItemCart = (props) => {
             <button onClick={clickDown} className='item-button-down'>&#x21E9;</button>
           </div>
         </div>
-        <div className='item-btn'>
-          <button onClick={ removeFromCart }>REMOVE</button>
+        <div>
+          <button className='item-btn-remove' onClick={ removeFromCart }>REMOVE</button>
         </div>
       </div>
     </div>

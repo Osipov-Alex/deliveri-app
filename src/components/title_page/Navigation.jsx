@@ -12,6 +12,10 @@ const Navigation = () => {
         <span>
           <Link to='shoping-cart'>Shoping Cart</Link>
         </span>
+        <span className='tower'> | </span>
+        <span>
+          <Link to='history'>Histoty</Link>
+        </span>
       </div>
       <Outlet />
     </div>

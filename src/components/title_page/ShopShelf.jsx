@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import ProductCard from './ProductCard';
 import axios from '../../utils/axios';
 
+import ProductCard from './ProductCard';
 
 const ShopShelf = () => {
   
@@ -10,9 +10,9 @@ const ShopShelf = () => {
 
   useEffect(() => {
     axios.get('/products').then(response => {
-      dispatch({ type: 'ADD_PRODUCT_FROM_DB', payload: response.data })
+      dispatch({ type: 'ADD_PRODUCT_FROM_DB', payload: response.data });
     }).catch(error => {
-      console.log(error)
+      console.log(error);
     })
   }, [dispatch]);
 
@@ -23,11 +23,11 @@ const ShopShelf = () => {
 
   return (
     <div className='magazines-shelf bl'>
-      { products.map(product =>
-          <ProductCard product={product} key={product.productName} />
-        )}
+      {products.map(product =>
+        <ProductCard product={product} key={product.productName} />
+      )}
     </div>
   )
-}
+};
 
 export default ShopShelf;

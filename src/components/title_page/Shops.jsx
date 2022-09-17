@@ -16,6 +16,7 @@ const Shops = () => {
   }, [dispatch])
 
   const shops = useSelector(state => state.shop.shops)
+
   return (
     <div className='magazines'>
       <span className='title-magazine'><strong>Shops:</strong></span>
