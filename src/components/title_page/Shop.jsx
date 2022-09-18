@@ -8,7 +8,7 @@ const Shop = (props) => {
   }
   return (
     <div className='magazine'> 
-      <button onClick={() => chooseShop(props.shop.shopName) } className='magazine-button'>{props.shop.shopName}</button>
+      <button onClick={() => chooseShop(props.shop.shopName) } className='magazine-button btnh'>{props.shop.shopName}</button>
     </div>
   )
 }

@@ -21,10 +21,12 @@ const ItemCart = (props) => {
     dispatch({ type: 'REMOVE_FROM_CART', payload: props.product.id })
   }
 
+  // const image = `data:image/png;base64,${props.product.image}`
+
   return (
     <div className='item-cart'>
-      <div className='cart-image'>
-        <img src={props.product.image} alt='' width='379px' height='162px' />
+      <div className=''>
+        <img className='cart-image' src={`data:image/png;base64,${props.product.image}`} alt='' width='400px' height='180px' />
       </div>
       <div className='item-cart-info'>
         <div className='item-info'>
@@ -49,7 +51,7 @@ const ItemCart = (props) => {
           </div>
         </div>
         <div>
-          <button className='item-btn-remove' onClick={ removeFromCart }>REMOVE</button>
+          <button className='item-btn-remove btnh' onClick={ removeFromCart }>REMOVE</button>
         </div>
       </div>
     </div>

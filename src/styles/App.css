@@ -15,6 +15,10 @@ a {
   background-color: rgb(221, 216, 216);
 }
 
+.btnh:hover{
+  background-color: white;
+}
+
 .navigation {
   font-size: 25px;
   padding: 5px 0 0 0;
@@ -72,21 +76,9 @@ a {
   margin: 15px;
   padding: 5px;
   text-align: center;
-  background: rgb(243, 239, 239);
+  /* background: rgb(243, 239, 239); */
+  background-color: rgb(200, 195, 195);
 }
-
-/* .magazine-button {
-  width: 150px;
-  height: 50px;
-  font-size: 30px;
-  box-sizing: border-box;
-  border: 2px solid black;
-  border-radius: 10px;
-  /* margin: 15px;
-  padding: 5px; */
-  /* text-align: center;
-  background: rgb(243, 239, 239);
-} */ 
 
 .magazines-shelf {
   box-sizing: border-box;
@@ -121,9 +113,13 @@ a {
 .image-product {
   display: flex;
   box-sizing: border-box;
-  justify-content: space-around;
+  width: 300px;
   margin: 10px;
   border: 2px solid black;
+  border-radius: 10px;
+}
+
+.img{
   border-radius: 10px;
 }
 
@@ -143,7 +139,8 @@ a {
   border: 2px solid black;
   border-radius: 10px;
   width: 140px;
-  background-color: rgb(247, 240, 240);
+  /* background-color: rgb(247, 240, 240); */
+  background-color: rgb(200, 195, 195);
 }
 
 /* Page of cart */
@@ -262,13 +259,15 @@ a {
   border: 2px solid black;
   border-radius: 4px;
   margin: 10px 0 0 0;
-  background-color: rgb(248, 248, 248);
+  /* background-color: rgb(248, 248, 248); */
+  background-color: rgb(200, 195, 195);
 }
 
 .item-btns {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+
 }
 
 .item-button-up {
@@ -309,12 +308,14 @@ a {
   font-size: 30px;
   border: 2px solid black;
   border-radius: 10px;
-  background-color: rgb(248, 248, 248);
+  /* background-color: rgb(248, 248, 248); */
+  background-color: rgb(200, 195, 195);
 }
 
 .history-page {
   box-sizing: border-box;
   border: 2px solid black;
+  border-radius: 10px;
   margin: 10px 10px 10px 10px;
   background-color: wheat;
   /* for inner element */
@@ -325,6 +326,7 @@ a {
 .history-user-information {
   box-sizing: border-box;
   border: 2px solid black;
+  border-radius: 10px;
   margin: 10px 10px 10px 10px;
   padding: 15px 0 30px 0;
   background-color: rgb(221, 216, 216);
@@ -340,10 +342,11 @@ a {
 }
 
 .history-shelf {
-  height: 57vh;
+  height: 58vh;
   overflow: auto;
   box-sizing: border-box;
   border: 2px solid black;
+  border-radius: 10px;
   margin: 5px 10px 10px 10px;
   background-color: rgb(221, 216, 216);
   /* for inner element */

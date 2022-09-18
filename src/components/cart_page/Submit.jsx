@@ -36,7 +36,7 @@ const CartSubmit = () => {
   return (
     <div className='cart-submit'>
       <div className='price'>Total price: <span>{totalPrice}</span></div>
-      <button className='submit-button' onClick={submit}>Submit</button>
+      <button className='submit-button btnh' onClick={submit}>Submit</button>
     </div>
   )
 }
