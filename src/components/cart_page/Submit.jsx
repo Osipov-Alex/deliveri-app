@@ -1,13 +1,15 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { clearCart } from '../../redux/reducers/actions/cartActions';
+import { clearUserInformation } from '../../redux/reducers/actions/userActions';
 import axios from '../../utils/axios';
 
 const CartSubmit = () => {
+  
   const dispatch = useDispatch();
 
   const productsInCart = useSelector(state => state.cart.productsInCart);
   const {  name, address, email, phoneNumber  } = useSelector(state => state.user);
-  // const shop = useSelector(state => state.shop.currentShop);
 
   const totalPrice = productsInCart.reduce((acc, curr) => {
     return acc + (curr.quantity * curr.price);
@@ -22,15 +24,15 @@ const CartSubmit = () => {
       address: address,
       totalPrice: totalPrice,
       products: [...productsInCart],
-    }
+    };
 
     axios.post('/order', data)
     .catch(error => {
       console.log(error);
     });
 
-    dispatch({ type: 'SUBMIT' });
-    dispatch({ type: 'MAKE_ORDER' })
+    dispatch(clearUserInformation());
+    dispatch(clearCart())
   };
 
   return (

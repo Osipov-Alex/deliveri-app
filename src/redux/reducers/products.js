@@ -1,11 +1,12 @@
+import { GET_PRODUCT } from "./actions/types";
+
 const defaultState = {
   products: [],
 };
 
-
 const productReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case 'ADD_PRODUCT_FROM_DB':
+    case GET_PRODUCT:
       return { ...state, products: action.payload }
     default:
       return state

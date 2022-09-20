@@ -1,6 +1,6 @@
-import React from 'react'
-import CartShelf from './CartShelf'
-import UserInfo from './UserInfo'
+import React from 'react';
+import CartShelf from './CartShelf';
+import UserInfo from './UserInfo';
 
 const CartContent = () => {
   return (
@@ -9,6 +9,6 @@ const CartContent = () => {
       <CartShelf />
     </div>
   )
-}
+};
 
 export default CartContent

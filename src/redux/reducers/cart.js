@@ -1,14 +1,17 @@
+import { ADD_PRODUCT, CLEAR_CART, DECREASE_QUANTITY, INCREASE_QUANTITY, REMOVE_FROM_CART } from "./actions/types";
+
+
 const defaultState = {
   productsInCart: []
-}
+};
 
 const cartReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case 'MAKE_ORDER':
+    case CLEAR_CART:
       return { productsInCart: [] }
-    case 'ADD_PRODUCT':
+    case ADD_PRODUCT:
       return { ...state, productsInCart: [...state.productsInCart, action.payload] };
-    case 'INCREASE_QUANTITY':
+    case INCREASE_QUANTITY:
       return {
         ...state, productsInCart: state.productsInCart.map(product => {
           if (product.id === action.payload) {
@@ -18,7 +21,7 @@ const cartReducer = (state = defaultState, action) => {
           }
         })
       };
-    case 'DECREASE_QUANTITY':
+    case DECREASE_QUANTITY:
       return {
         ...state, productsInCart: state.productsInCart.map(product => {
           if (product.id === action.payload) {
@@ -28,13 +31,13 @@ const cartReducer = (state = defaultState, action) => {
           }
         })
       };
-    case "REMOVE_FROM_CART":
+    case REMOVE_FROM_CART:
       return {
         productsInCart: state.productsInCart.filter(product => product.id !== action.payload)
       };
-    default: 
+    default:
       return state
   }
-}
+};
 
 export default cartReducer

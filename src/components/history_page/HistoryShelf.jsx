@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import axios from '../../utils/axios.js';
 import { useDispatch, useSelector } from 'react-redux';
+import { addHistory } from '../../redux/reducers/actions/historyActions.js';
+import axios from '../../utils/axios.js';
 import HistoryOrderCard from './HistoryOrderCard.jsx';
+
 
 const HistoryShelf = () => {
 
@@ -9,7 +11,7 @@ const HistoryShelf = () => {
 
   useEffect(() => {
     axios.get('/orders').then(response => {
-      dispatch({ type: 'ADD_HISTORY_FROM_DB', payload: response.data });
+      dispatch(addHistory(response.data));
     }).catch(error => {
       console.log(error);
     })
@@ -19,6 +21,7 @@ const HistoryShelf = () => {
   const userEmail = useSelector(state => state.history.email);
 
   const orderHistory = useSelector(state => state.history.orderHistory.filter(order => {
+    // Тут наверное лучше логическое И
     return order.phoneNumber === userPhoneNumber || order.email === userEmail
   }));
 

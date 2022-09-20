@@ -1,3 +1,6 @@
+import { CLEAR_USER_INFORMATION, USER_ADDRESS, USER_EMAIL, USER_NAME, USER_PHONE_NUMBER } from "./actions/types"
+
+
 const defaultState = {
   name: '',
   email: '',
@@ -7,19 +10,19 @@ const defaultState = {
 
 const userReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case 'NAME':
+    case USER_NAME:
       return { ...state, name: action.payload }
-    case 'EMAIL':
+    case USER_EMAIL:
       return { ...state, email: action.payload }
-    case 'PHONE_NUMBER':
+    case USER_PHONE_NUMBER:
       return { ...state, phoneNumber: action.payload }
-    case 'ADDRESS':
+    case USER_ADDRESS:
       return { ...state, address: action.payload }
-    case 'SUBMIT':
+    case CLEAR_USER_INFORMATION:
       return { name: '', email: '', phoneNumber: '', address: '' }
     default:
       return state
   }
-}
+};
 
 export default userReducer
