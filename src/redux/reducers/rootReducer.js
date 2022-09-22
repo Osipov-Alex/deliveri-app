@@ -11,6 +11,6 @@ const rootReducer = combineReducers({
   shop: shopReducer,
   user: userReducer,
   history: historyReducer,
-})
+});
 
 export default rootReducer

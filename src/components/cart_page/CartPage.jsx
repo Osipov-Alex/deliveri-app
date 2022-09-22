@@ -9,6 +9,6 @@ const CartPage = () => {
       <Submit />
     </div>
   )
-}
+};
 
 export default CartPage

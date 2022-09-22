@@ -8,7 +8,7 @@
 a {
   color: black;
   text-decoration: underline;
-}
+} 
 
 .App {
   height: 100vh;
@@ -24,7 +24,7 @@ a {
   padding: 5px 0 0 0;
   height: 100%;
   width: 100%;
-  /* background-color: rgb(221, 216, 216); */
+
 }
 
 .title-nav {
@@ -399,4 +399,5 @@ a {
 
 .history-card-item-price{
   font-size: 18px;
+  text-align: center;
 }

@@ -3,17 +3,17 @@ import HistoryProductCard from './HistoryProductCard';
 
 const HistoryOrderCard = ({ order }) => {
 
-  const purchasedProducts = order.products
+  const { products, totalPrice } = order;
 
   return (
     <div className='history-order-card'>
       <div className='history-order-shelf'>
-        {purchasedProducts.map(product => 
+        {products.map(product => 
         <HistoryProductCard product={product} key={ product._id } />
         )}
       </div>
       <div className='history-order-price'>
-        <span>Total Price:</span><br /><span>{ order.totalPrice }</span>
+        <span>Total Price:</span><br /><span>{ totalPrice }</span>
       </div>
     </div>
   )

@@ -10,7 +10,7 @@ const ShopShelf = () => {
 
   useEffect(() => {
     axios.get('/products').then(response => {
-      dispatch({ type: 'ADD_PRODUCT_FROM_DB', payload: response.data });
+      dispatch({ type: 'GET_PRODUCT', payload: response.data });
     }).catch(error => {
       console.log(error);
     })
@@ -24,7 +24,7 @@ const ShopShelf = () => {
   return (
     <div className='magazines-shelf bl'>
       {products.map(product =>
-        <ProductCard product={product} key={product.productName} />
+        <ProductCard product={product} key={product._id} />
       )}
     </div>
   )

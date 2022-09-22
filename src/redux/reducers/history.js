@@ -1,3 +1,7 @@
+import { ADD_HISTORY, HISTORY_USER_EMAIL, HISTORY_USER_PHONE_NUMBER } from "./actions/types";
+
+
+
 const defaultState = {
   orderHistory: [],
   email: '',
@@ -6,15 +10,15 @@ const defaultState = {
 
 const historyReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case 'HISTORY_USER_EMAIL':
+    case HISTORY_USER_EMAIL:
       return { ...state, email: action.payload };
-    case 'HISTORY_USER_PHONE_NUMBER':
+    case HISTORY_USER_PHONE_NUMBER:
       return { ...state, phoneNumber: action.payload };
-    case 'ADD_HISTORY_FROM_DB':
+    case ADD_HISTORY:
       return { ...state, orderHistory: [...action.payload] };
     default:
       return state
   }
-}
+};
 
-export default historyReducer;
+export default historyReducer

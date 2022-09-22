@@ -1,19 +1,21 @@
 import React from 'react';
 
-const HistoryProductCard = (props) => {
+const HistoryProductCard = ({ product }) => {
+
+  const { productName, image, price } = product;
 
   return (
     <div className='history-product-card'>
       <div className='cart-image'>
-        <img src={props.product.image} alt='' width='275px' height='162px' />
+        <img src={image} alt='' width='275px' height='162px' />
       </div>
       <div className='item-cart-info'>
         <div className='history-card-item-info'>
           <div className='history-card-item-name'>
-            <span>{props.product.productName}</span>
+            <span>{productName}</span>
           </div>
           <div className='history-card-item-price'>
-            <span>Price: </span><span>{props.product.price}</span>
+            <span>Price: </span><br /><span>{price}</span>
           </div>
         </div>
       </div>

@@ -9,6 +9,6 @@ const HistotyPage = () => {
       <HistoryShelf />
     </div>
   )
-}
+};
 
-export default HistotyPage;
+export default HistotyPage
