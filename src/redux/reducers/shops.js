@@ -1,6 +1,5 @@
 import { ADD_SHOPS, CURRENT_SHOP } from "./actions/types"
 
-
 const defaultState = {
   shops: [],
   currentShop: ''
