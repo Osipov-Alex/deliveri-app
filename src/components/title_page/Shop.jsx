@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { currentShop } from '../../redux/slice/shopsSlice';
 
 const Shop = ({ shop }) => {
 
@@ -7,7 +8,7 @@ const Shop = ({ shop }) => {
 
   const dispatch = useDispatch();
   const chooseShop = (shopName) => {
-    dispatch({ type: 'CURRENT_SHOP', payload: shopName })
+    dispatch(currentShop(shopName))
   };
 
   return (

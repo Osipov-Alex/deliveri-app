@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart } from '../../redux/reducers/actions/cartActions';
-import { clearUserInformation } from '../../redux/reducers/actions/userActions';
+import { clearCart } from '../../redux/slice/cartSlice';
+import { clearUserInformation } from '../../redux/slice/userSlice';
 import axios from '../../utils/axios';
 
 const CartSubmit = () => {

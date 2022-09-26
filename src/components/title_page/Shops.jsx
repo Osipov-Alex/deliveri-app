@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getShops } from '../../redux/selectors.js';
+import { addShops } from '../../redux/slice/shopsSlice.js';
 import axios from '../../utils/axios.js';
 import Shop from './Shop';
 
@@ -10,15 +11,14 @@ const Shops = () => {
 
   useEffect(() => {
     axios.get('/shops').then(response => {
-      dispatch({ type: 'ADD_SHOPS', payload: response.data })
+      dispatch(addShops(response.data));
     }).catch(error => {
       console.log(error)
     });
   }, [dispatch]);
 
-  // const shops = useSelector(state => state.shop.shops);
-  const shops = useSelector(getShops)
-  console.log(shops)
+  const shops = useSelector(getShops);
+
   return (
     <div className='magazines'>
       <span className='title-magazine'><strong>Shops:</strong></span>
