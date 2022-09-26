@@ -1,13 +1,19 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { userAddress, userEmail, userName, userPhoneNumber } from '../../redux/reducers/actions/userActions';
+import { getUserAddress, getUserEmail, getUserName, getUserPhoneNumber } from '../../redux/selectors';
 
 const UserInfo = () => {
 
   const dispatch = useDispatch();
 
-  const { name, address, email, phoneNumber } = useSelector(state => state.user);
-  
+  // const { name, address, email, phoneNumber } = useSelector(state => state.user);
+
+  const name = useSelector(getUserName);
+  const address = useSelector(getUserAddress);
+  const email = useSelector(getUserEmail);
+  const phoneNumber = useSelector(getUserPhoneNumber);
+
   return (
     <div className='user-data'>
       <div className='name data-element'>

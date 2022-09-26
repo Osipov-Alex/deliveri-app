@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { getProducts } from '../../redux/selectors';
 import axios from '../../utils/axios';
 
 import ProductCard from './ProductCard';
@@ -16,10 +17,7 @@ const ShopShelf = () => {
     })
   }, [dispatch]);
 
-  const shop = useSelector(state => state.shop.currentShop);
-  const products = useSelector(state => state.product.products.filter(product => {
-    return product.shop === shop
-  }));
+  const products = useSelector(getProducts)
 
   return (
     <div className='magazines-shelf bl'>

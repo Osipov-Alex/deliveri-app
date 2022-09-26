@@ -1,10 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { getProductInCart } from '../../redux/selectors';
 import ProductCardInCart from './ProductCardInCart';
 
 const CartShelf = () => {
   
-  const productsInCart = useSelector(state => state.cart.productsInCart)
+  const productsInCart = useSelector(getProductInCart)
   
   return (
     <div className='cart-info'>

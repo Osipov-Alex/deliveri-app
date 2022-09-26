@@ -1,12 +1,10 @@
 import { ADD_HISTORY, HISTORY_USER_EMAIL, HISTORY_USER_PHONE_NUMBER } from "./actions/types";
 
-
-
 const defaultState = {
   orderHistory: [],
   email: '',
   phoneNumber: '',
-}
+};
 
 const historyReducer = (state = defaultState, action) => {
   switch (action.type) {
