@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addHistory } from '../../redux/reducers/actions/historyActions.js';
+import { addHistory } from '../../redux/slice/historySlice.js';
 import { getOrderHistory } from '../../redux/selectors.js';
 import axios from '../../utils/axios.js';
 import HistoryOrderCard from './HistoryOrderCard.jsx';
-
 
 const HistoryShelf = () => {
 
@@ -17,9 +16,6 @@ const HistoryShelf = () => {
       console.log(error);
     })
   }, [dispatch]);
-
-  // const userPhoneNumber = useSelector(state => state.history.phoneNumber);
-  // const userEmail = useSelector(state => state.history.email);
 
   const orderHistory = useSelector(getOrderHistory);
 
