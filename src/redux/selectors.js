@@ -1,56 +1,56 @@
-import { createSelector } from 'reselect'
+import { createSelector } from '@reduxjs/toolkit';
 
-const getShopsReducer = (state) => state.shop;
-const getProductsReducer = (state) => state.product;
-const getCartReducer = (state) => state.cart;
-const getUserReducer = (state) => state.user;
-const getHistoryReducer = (state) => state.history;
+const getShopsSlice = (state) => state.shops;
+const getProductsSlice = (state) => state.products;
+const getCartSlice = (state) => state.cart;
+const getUserSlice = (state) => state.user;
+const getHistorySlice = (state) => state.history;
 
 export const getShops = createSelector(
-  [getShopsReducer], state => state.shops
+  [getShopsSlice], state => state.shops
 );
 
 export const getCurrentShop = createSelector(
-  [getShopsReducer], state => state.currentShop
+  [getShopsSlice], state => state.currentShop
 );
 
 export const getProducts = createSelector(
-  [getProductsReducer, getCurrentShop],
+  [getProductsSlice, getCurrentShop],
   (state, shop) => state.products.filter(product => {
     return product.shop === shop
   })
 );
 
 export const getProductInCart = createSelector(
-  [getCartReducer], state => state.productsInCart
+  [getCartSlice], state => state.productsInCart
 );
 
 export const getUserName = createSelector(
-  [getUserReducer], state => state.name
+  [getUserSlice], state => state.name
 );
 
 export const getUserEmail = createSelector(
-  [getUserReducer], state => state.email
+  [getUserSlice], state => state.email
 );
 
 export const getUserPhoneNumber = createSelector(
-  [getUserReducer], state => state.phoneNumber
+  [getUserSlice], state => state.phoneNumber
 );
 
 export const getUserAddress = createSelector(
-  [getUserReducer], state => state.address
+  [getUserSlice], state => state.address
 );
 
 export const getUserEmailHistory = createSelector(
-  [getHistoryReducer], state => state.email
+  [getHistorySlice], state => state.email
 );
 
-export const getUserPhoneNuberlHistory = createSelector(
-  [getHistoryReducer], state => state.phoneNumber
+export const getUserPhoneNumberlHistory = createSelector(
+  [getHistorySlice], state => state.phoneNumber
 );
 
 export const getOrderHistory = createSelector(
-  [getHistoryReducer, getUserEmailHistory, getUserPhoneNuberlHistory],
+  [getHistorySlice, getUserEmailHistory, getUserPhoneNumberlHistory],
   (state, email, phoneNumber) => state.orderHistory.filter(order => {
     return order.phoneNumber === phoneNumber && order.email === email
   })

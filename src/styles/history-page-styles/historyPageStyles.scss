@@ -1,0 +1,114 @@
+.history-page {
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  background-color: $shelf-color;
+  /* for inner element */
+  display: flex;
+  flex-direction: column;
+}
+
+.history-user-information {
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  padding: 15px 0 30px 0;
+  background-color: $app-color;
+  /* for inner element */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .history-user-element {
+    margin: 10px 0 10px 0;
+  }
+
+  .data-element {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input {
+    width: 450px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px 0 0 0;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+.history-shelf {
+  height: 58vh;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 5px 10px 10px 10px;
+  background-color: $app-color;
+  /* for inner element */
+  display: flex;
+  flex-direction: column;
+  .history-order-card {
+    background-color: $shelf-color;
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* for inner element */
+    display: flex;
+  }
+  .history-order-shelf {
+    flex: 7;
+    /* for inner element */
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .history-order-price {
+    flex: 1;
+    align-items: flex-end;
+    align-self: center;
+    text-align: center;
+  }
+    .history-product-card {
+      width: 30%;
+      box-sizing: border-box;
+      border: 2px solid black;
+      margin: 10px;
+      background-color: $product-cart-color;
+      border-radius: 10px;
+      /* for inner element */
+      display: flex;
+    }
+      .cart-image {
+        box-sizing: border-box;
+        border: 2px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        background-color: white;
+      }
+      .item-cart-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .history-card-item-info {
+        align-items: center;
+        margin: 3px;
+      }
+      .history-card-item-name {
+        font-size: 18px;
+      }
+      .history-card-item-price {
+        font-size: 18px;
+        text-align: center;
+      }
+}

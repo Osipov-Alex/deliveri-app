@@ -1,9 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart } from '../../redux/reducers/actions/cartActions';
-import { clearUserInformation } from '../../redux/reducers/actions/userActions';
-import axios from '../../utils/axios';
-
+import { addNewOrder, clearCart } from '../../redux/slice/cartSlice';
+import { clearUserInformation } from '../../redux/slice/userSlice';
+// import axios from '../../utils/axios';
 const CartSubmit = () => {
   
   const dispatch = useDispatch();
@@ -23,13 +22,10 @@ const CartSubmit = () => {
       phoneNumber: phoneNumber,
       address: address,
       totalPrice: totalPrice,
-      products: [...productsInCart],
+      products: productsInCart,
     };
 
-    axios.post('/order', data)
-    .catch(error => {
-      console.log(error);
-    });
+    dispatch((addNewOrder(data)));
 
     dispatch(clearUserInformation());
     dispatch(clearCart())

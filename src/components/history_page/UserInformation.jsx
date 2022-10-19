@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { historyUserEmail, historyUserPhoneNuber } from '../../redux/reducers/actions/historyActions';
-
+import { historyUserEmail, historyUserPhoneNumber } from '../../redux/slice/historySlice';
 
 const UserInformation = () => {
 
@@ -28,7 +27,7 @@ const UserInformation = () => {
           type='text'
           placeholder='Your phone number?'
           value={phoneNumber}
-          onChange={e => dispatch(historyUserPhoneNuber(e.target.value))}
+          onChange={e => dispatch(historyUserPhoneNumber(e.target.value))}
         />
       </div>
     </div>

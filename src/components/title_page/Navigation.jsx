@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 const Navigation = () => {
   
   return (
-    <div className='navigation'>
+    <div className='header'>
       <div className='title-nav'>
         <span className='link-to-shop'>
           <Link to='/'>Shop</Link>
