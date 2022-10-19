@@ -1,4 +1,35 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from '../../utils/axios';
+
+export const addNewOrder = createAsyncThunk(
+  'cart/addNewOrder',
+  async (data, { rejectWithValue }) => {
+    try {
+      const res = await axios.post('/order', data);
+      return res.data
+    } catch (e) {
+      rejectWithValue(e.message);
+    }
+  }
+)
+
+// export const addOrderToDb = createAsyncThunk(
+//   'cart/addNewOrder',
+//   async (_, { rejectWithValue }) => {
+//     try {
+//       return await axios.post('/order', {
+//         name: '1',
+//         email: '1',
+//         phoneNumber: 1,
+//         address: '1',
+//         totalPrice: 3,
+//         products: [],
+//       }).then(res => console.log(res.data))
+//     } catch (error) {
+//       rejectWithValue(error.message)
+//     }
+//   }
+// )
 
 const cartSlice = createSlice({
   name: 'cart',

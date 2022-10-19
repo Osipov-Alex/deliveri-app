@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$app-color: rgb(221, 216, 216);
+$shelf-color: wheat;
+$product-cart-color: rgb(243, 197, 189);
+$button-color: rgb(200, 195, 195);
+
+@import './title-page-styles/titlePageStyles.scss';
+@import './cart-page-styles/cartPageStyles.scss';
+@import './history-page-styles/historyPageStyles.scss';  
+
+.App {
+  min-height: 100vh;
+  background-color: $app-color;
+}
+
+.header {
+  font-size: 25px;
+  padding: 5px 0 0 0;
+  height: 100%;
+  width: 100%;
+    .title-nav {
+      margin: 0 0 10px 30px;
+    }
+    .tower {
+      font-size: 35px;
+      margin: 0 10px 0 10px;
+    }
+    a {
+      color: black;
+    }
+}

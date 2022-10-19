@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
 
-const getShopsSlice = (state) => state.shop;
-const getProductsSlice = (state) => state.product;
+const getShopsSlice = (state) => state.shops;
+const getProductsSlice = (state) => state.products;
 const getCartSlice = (state) => state.cart;
 const getUserSlice = (state) => state.user;
 const getHistorySlice = (state) => state.history;

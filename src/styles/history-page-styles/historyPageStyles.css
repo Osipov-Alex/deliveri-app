@@ -1,0 +1,95 @@
+.history-page {
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  background-color: wheat;
+  /* for inner element */
+  display: flex;
+  flex-direction: column;
+}
+
+.history-user-information {
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  padding: 15px 0 30px 0;
+  background-color: rgb(221, 216, 216);
+  /* for inner element */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.history-user-information .history-user-element {
+  margin: 10px 0 10px 0;
+}
+.history-user-information .data-element {
+  display: flex;
+  flex-direction: column;
+}
+.history-user-information .input {
+  width: 450px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 10px 0 0 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.history-shelf {
+  height: 58vh;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 5px 10px 10px 10px;
+  background-color: rgb(221, 216, 216);
+  /* for inner element */
+  display: flex;
+  flex-direction: column;
+}
+.history-shelf .history-order-card {
+  background-color: wheat;
+  margin: 10px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  /* for inner element */
+  display: flex;
+}
+.history-shelf .history-order-shelf {
+  flex: 7;
+  /* for inner element */
+  display: flex;
+  flex-flow: row wrap;
+}
+.history-shelf .history-order-price {
+  flex: 1;
+  align-items: flex-end;
+  align-self: center;
+  text-align: center;
+}
+
+.history-product-card {
+  box-sizing: border-box;
+  border: 2px solid black;
+  margin: 10px;
+  background-color: rgb(243, 197, 189);
+  border-radius: 10px;
+  /* for inner element */
+  display: flex;
+}
+.history-product-card .history-card-item-info {
+  align-items: center;
+  margin: 3px;
+}
+.history-product-card .history-card-item-name {
+  font-size: 18px;
+}
+.history-product-card .history-card-item-price {
+  font-size: 18px;
+  text-align: center;
+}/*# sourceMappingURL=historyPageStyles.css.map */

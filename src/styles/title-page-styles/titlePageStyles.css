@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.magazines-content {
+  display: flex;
+  align-content: stretch;
+  flex-flow: row nowrap;
+  height: 90vh;
+  padding: 0 25px 0 15px;
+}
+
+.magazines {
+  box-sizing: border-box;
+  background-color: wheat;
+  margin: 0 7px 0 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  flex: 1;
+  /* For inner content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+.magazines .title-magazine {
+  margin: 30px 0 0 0;
+  font-size: 20px;
+}
+.magazines .magazine-button {
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(200, 195, 195);
+}
+
+.magazines-shelf {
+  box-sizing: border-box;
+  background-color: wheat;
+  overflow: auto;
+  margin: 0 0 0 7px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  flex: 4;
+  /* For inner content */
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+.magazines-shelf .product-сard {
+  max-height: 238px;
+  flex-basis: calc(33.33% - 30px);
+  box-sizing: border-box;
+  margin: 15px;
+  padding: 5px;
+  background-color: rgb(243, 197, 189);
+  border: 2px solid black;
+  border-radius: 10px;
+  /* Для внутрених элементов */
+  display: flex;
+  flex-direction: column;
+}
+.magazines-shelf .image-product {
+  display: flex;
+  box-sizing: border-box;
+  width: 300px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.magazines-shelf .img {
+  border-radius: 10px;
+}
+.magazines-shelf .name-product {
+  align-self: flex-start;
+  font-size: 22px;
+  margin: 0 0 0 15px;
+}
+.magazines-shelf .product-button {
+  align-self: flex-end;
+  margin: 0 0 5px 0;
+}
+.magazines-shelf .button {
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 140px;
+  background-color: rgb(200, 195, 195);
+}/*# sourceMappingURL=titlePageStyles.css.map */

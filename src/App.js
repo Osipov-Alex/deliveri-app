@@ -1,10 +1,11 @@
 import React from 'react';
-import './styles/App.css';
+import './styles/style.css';
 import { Route, Routes } from 'react-router-dom'
 import Navigation from './components/title_page/Navigation';
 import TitlePage from './components/title_page/TitlePage';
 import CartPage from './components/cart_page/CartPage';
 import HistotyPage from './components/history_page/HistoryPage';
+
 
 function App() {
   return (

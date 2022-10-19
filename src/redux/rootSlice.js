@@ -5,11 +5,10 @@ import productSlice from './slice/productSlice';
 import shopsSlice from './slice/shopsSlice';
 import userSlice from './slice/userSlice';
 
-
 export const rootReducer = combineReducers({
   cart: cartSlice,
-  product: productSlice,
-  shop: shopsSlice,
+  products: productSlice,
+  shops: shopsSlice,
   user: userSlice,
   history: historySlice,
 });

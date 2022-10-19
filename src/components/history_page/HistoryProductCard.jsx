@@ -6,8 +6,8 @@ const HistoryProductCard = ({ product }) => {
 
   return (
     <div className='history-product-card'>
-      <div className='cart-image'>
-        <img src={image} alt='' width='275px' height='162px' />
+      <div >
+        <img className='cart-image' src={"http://localhost:3002/" + image} alt='' width='275px' height='162px' />
       </div>
       <div className='item-cart-info'>
         <div className='history-card-item-info'>
